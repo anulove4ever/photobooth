@@ -58,8 +58,8 @@ function upload(blob) {
   fd.append("photo", blob);
   fd.append("username", document.getElementById("username").value);
   fd.append("interest", document.getElementById("interest").value);
-
-  fetch("https://action-figure-backend.onrender.com", {
+  
+fetch("https://action-figure-backend.onrender.com/generate", {
     method: "POST",
     body: fd
   })
@@ -70,3 +70,4 @@ function upload(blob) {
       new QRCode(document.getElementById("qrcode"), data.url);
     });
 }
+
