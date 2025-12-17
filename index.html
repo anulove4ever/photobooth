@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Action Figure Booth</title>
+
+  <!-- Mobile required -->
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HOME -->
+<div id="home" class="screen active">
+  <h1>Action Figure Booth</h1>
+  <button onclick="goToDetails()">Start</button>
+</div>
+
+<!-- DETAILS -->
+<div id="details" class="screen">
+  <input id="username" placeholder="Your Name" />
+  <input id="interest" placeholder="Your Interest" />
+  <button onclick="goToCamera()">Continue</button>
+</div>
+
+<!-- CAMERA -->
+<div id="camera" class="screen">
+  <video id="video" autoplay playsinline muted></video>
+  <div id="countdown"></div>
+  <button onclick="startCapture()">Capture</button>
+</div>
+
+<!-- LOADER -->
+<div id="loader" class="screen">
+  <h2>Creating your Action Figure…</h2>
+</div>
+
+<!-- RESULT -->
+<div id="result" class="screen">
+  <img id="finalImage" />
+  <p>Scan QR code to download</p>
+  <div id="qrcode"></div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
