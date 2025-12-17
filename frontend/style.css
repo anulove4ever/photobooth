@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #0f0f0f;
+  color: white;
+  text-align: center;
+}
+
+.screen {
+  display: none;
+  padding: 20px;
+}
+
+.screen.active {
+  display: block;
+}
+
+input {
+  width: 80%;
+  padding: 12px;
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 14px 30px;
+  font-size: 18px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+video {
+  width: 90%;
+  max-width: 360px;
+  border-radius: 10px;
+  border: 3px solid white;
+}
+
+#countdown {
+  font-size: 48px;
+  margin: 10px;
+}
+
+#finalImage {
+  width: 90%;
+  max-width: 360px;
+  border-radius: 10px;
+}
+
+/* Force portrait UI */
+@media screen and (orientation: landscape) {
+  body::before {
+    content: "Please rotate your phone to portrait mode";
+    position: fixed;
+    inset: 0;
+    background: black;
+    color: white;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+  }
+}
